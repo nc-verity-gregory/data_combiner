@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "MarkPro";
+  src: url("./MarkPro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MarkPro"; /*Can be any text*/
+  src: local("MarkPro"), url("./fonts/MarkPro.ttf") format("truetype");
+}
+
+.learner-group-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+textarea {
+  margin-top: 16px;
+  min-height: 60px;
+  min-width: 250px;
+}
+
+input {
+  margin-left: 16px;
+}
+
+form {
+  max-width: 50%;
+  margin: auto;
+}
+.delete-icon {
+  height: 20px;
+}
+.results {
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+.json-output {
+  width: 50%;
+  border: 2px solid;
+  padding: 16px;
+  border-radius: 10px;
+}
+button {
+  margin: 8px;
+}
+.success {
+  background-color: #3dd980;
+  color: #414042;
+}
+
+@media (prefers-color-scheme: light) {
+}
