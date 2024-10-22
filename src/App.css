@@ -29,15 +29,14 @@ form {
   max-width: 50%;
   margin: auto;
 }
-.delete-icon {
-  height: 20px;
-}
+
 .results {
   max-width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
+  border: 1px solid white;
 }
 .json-output {
   width: 50%;

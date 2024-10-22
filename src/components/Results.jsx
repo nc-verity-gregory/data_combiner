@@ -18,9 +18,9 @@ export const Result = ({ csvData, jsonData }) => {
         <code>{formattedJson}</code>
       </section>
       <section>
-        <button onClick={downloadCsv}>Gimmie some rooms</button>
+        <button onClick={downloadCsv}>Download CSV for Zoom</button>
         <button onClick={copyJson} className={copied ? "success" : ""}>
-          {copied ? <p>On ya clipboard mate</p> : <p>Copy me some pairs</p>}
+          {copied ? <p>Copied!</p> : <p>Copy pairs to clipboard</p>}
         </button>
       </section>
     </div>

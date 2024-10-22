@@ -14,4 +14,8 @@ When submitted the app will make you a json output of pairs for the LMS pairing 
 
 Any issues please make a branch and submit a pull request for changes.
 
-The whole app is hosted temporarily at
+The whole app is hosted temporarily [here](https://6717f2e250aba38defec9279--shimmering-babka-6aac32.netlify.app/)
+
+## What's next
+
+Plans to make the form even more flexible, currently only supports a two group combination.
