@@ -18,4 +18,5 @@ The whole app is hosted temporarily [here](https://6717f2e250aba38defec9279--shi
 
 ## What's next
 
-Plans to make the form even more flexible, currently only supports a two group combination.
+- Plans to make the form even more flexible, currently only supports a two group combination.
+- Slack channel message generator with pairs, zoom link and repo link

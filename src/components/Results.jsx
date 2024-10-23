@@ -13,16 +13,13 @@ export const Result = ({ csvData, jsonData }) => {
     setCopied(true);
   };
   return (
-    <div className="results">
-      <section className="json-output">
-        <code>{formattedJson}</code>
-      </section>
-      <section>
+    <>
+      <div className="results">
         <button onClick={downloadCsv}>Download CSV for Zoom</button>
-        <button onClick={copyJson} className={copied ? "success" : ""}>
-          {copied ? <p>Copied!</p> : <p>Copy pairs to clipboard</p>}
+        <button onClick={copyJson}>
+          {copied ? <p>Copied!</p> : <p>Copy LMS pairs to clipboard</p>}
         </button>
-      </section>
-    </div>
+      </div>
+    </>
   );
 };

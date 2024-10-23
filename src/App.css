@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 textarea {
@@ -36,21 +37,14 @@ form {
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  border: 1px solid white;
 }
-.json-output {
-  width: 50%;
-  border: 2px solid;
-  padding: 16px;
-  border-radius: 10px;
-}
+
 button {
   margin: 8px;
 }
-.success {
-  background-color: #3dd980;
-  color: #414042;
+.student-pairs {
+  font-size: 14px;
+  line-height: 6px;
 }
-
 @media (prefers-color-scheme: light) {
 }

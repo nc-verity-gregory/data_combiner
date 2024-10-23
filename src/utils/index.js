@@ -1,20 +1,11 @@
-export const jsonGenerator = (groupOneStr, groupTwoStr) => {
+export const jsonGenerator = (groups) => {
   const studentOutputForJson = { pairs: [], solo: [] };
-  const groupOne = JSON.parse(groupOneStr);
-  const groupTwo = JSON.parse(groupTwoStr);
-  groupOne.solo.forEach((student) => {
-    studentOutputForJson.solo.push(student);
-  });
-  groupTwo.solo.forEach((student) => {
-    studentOutputForJson.solo.push(student);
+  groups.forEach((group) => {
+    const { pairs, solo } = JSON.parse(group);
+    pairs.forEach((pair) => studentOutputForJson.pairs.push(pair));
+    solo.forEach((person) => studentOutputForJson.solo.push(person));
   });
 
-  groupOne.pairs.forEach((pair) => {
-    studentOutputForJson.pairs.push(pair);
-  });
-  groupTwo.pairs.forEach((pair) => {
-    studentOutputForJson.pairs.push(pair);
-  });
   return studentOutputForJson;
 };
 
@@ -40,4 +31,19 @@ export const csvGenerator = (studentData, tutorRoom, staffRooms) => {
     studentOutputForCsv.push(`${name}-NC, null@null.com`);
   });
   return studentOutputForCsv.join("\n");
+};
+
+export const pairStringsForSlack = (groups) => {
+  const addEmojis = groups.map((group) => {
+    const { pairs, solo } = JSON.parse(group);
+    let groupsString = "";
+    pairs.forEach(([personOne, personTwo]) => {
+      groupsString += `🍐 ${personOne.name} & ${personTwo.name} 🍐\n`;
+    });
+    solo.forEach(({ name }) => {
+      groupsString += `🍎 ${name} 🍎\n`;
+    });
+    return groupsString;
+  });
+  return addEmojis;
 };
