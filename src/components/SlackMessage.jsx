@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { pairStringsForSlack } from "../utils";
-import { GroupMessage } from "./groupMessages";
+import { GroupMessage } from "./GroupMessage";
 
 export const SlackMessage = ({ groups }) => {
   const [links, setLinks] = useState({ repo: "", zoom: "" });
