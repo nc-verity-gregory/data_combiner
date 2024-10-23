@@ -15,7 +15,7 @@ export const GroupMessage = ({ group, links, groupCount }) => {
         })}
       </div>
       <div>
-        <button onClick={copyMessage}>{copied ? "Copy" : "Copied!"}</button>
+        <button onClick={copyMessage}>{copied ? "Copied!" : "Copy"}</button>
       </div>
     </section>
   );

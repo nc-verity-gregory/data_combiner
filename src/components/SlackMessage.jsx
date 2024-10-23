@@ -25,6 +25,7 @@ export const SlackMessage = ({ groups }) => {
             setLinks(currData);
           }}
         ></input>
+        <br></br>
         <label>Zoom Link</label>
         <input
           type="text"
