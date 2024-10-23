@@ -85,6 +85,7 @@ export const Form = ({ dataGenerator, setDataGenerator }) => {
                 <textarea
                   type="text"
                   name={`learner-group-${index + 1}`}
+                  autoFocus
                   onChange={(e) => {
                     const currData = { ...inputData };
                     currData.groups[index] = e.target.value;
@@ -129,6 +130,7 @@ export const Form = ({ dataGenerator, setDataGenerator }) => {
             <input
               type="text"
               placeholder={`Staff Member ${index + 1}`}
+              autoFocus
               value={staffMember.name}
               onChange={(e) => {
                 handleStaffChange(index, e);

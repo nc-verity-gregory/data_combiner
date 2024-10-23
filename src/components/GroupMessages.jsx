@@ -1,7 +1,6 @@
 import { useState } from "react";
 export const GroupMessage = ({ group, links, groupCount }) => {
   const [copied, setCopied] = useState(false);
-  console.log(group, links);
   const fullMessage = `Hello @channel Here are your details for today\n :school: ${links.zoom}\n:github: ${links.repo}\n ${group}`;
   const copyMessage = () => {
     navigator.clipboard.writeText(fullMessage);
