@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { csvGenerator, jsonGenerator } from "../utils";
 export const Form = ({ dataGenerator, setDataGenerator }) => {
   const [inputData, setInputData] = useState({
-    groups: [{}],
+    groups: [{ pairs: [], solo: [] }],
     tutorRoom: "",
     staff: [],
   });
+  const [reset, setReset] = useState(false);
+
+  useEffect(() => {}, [reset]);
   const handleSubmit = (e) => {
     e.preventDefault();
     const jsonData = jsonGenerator(inputData.groups);
@@ -48,15 +51,15 @@ export const Form = ({ dataGenerator, setDataGenerator }) => {
   const handleClearForm = (e) => {
     e.preventDefault();
     setInputData({
-      groupOne: "",
-      groupTwo: "",
+      groups: [{ pairs: [], solo: [] }],
       tutorRoom: "",
       staff: [],
     });
     setDataGenerator({
-      json: { converted: false, data: "" },
+      json: { converted: false, data: "", groups: [] },
       csv: { converted: false, data: "" },
     });
+    setReset(true);
   };
   const handleAddGroup = (e) => {
     e.preventDefault();
@@ -91,8 +94,9 @@ export const Form = ({ dataGenerator, setDataGenerator }) => {
                     currData.groups[index] = e.target.value;
                     setInputData(currData);
                   }}
-                  value={inputData.groupOne}
+                  value={inputData.groups[index].pairs}
                 ></textarea>
+
                 <button
                   onClick={(e) => {
                     handleAddGroup(e);
@@ -100,13 +104,15 @@ export const Form = ({ dataGenerator, setDataGenerator }) => {
                 >
                   +
                 </button>
-                <button
-                  onClick={(e) => {
-                    handleRemoveGroup(e, index);
-                  }}
-                >
-                  x
-                </button>
+                {index === 0 ? null : (
+                  <button
+                    onClick={(e) => {
+                      handleRemoveGroup(e, index);
+                    }}
+                  >
+                    x
+                  </button>
+                )}
               </div>
             );
           })}
