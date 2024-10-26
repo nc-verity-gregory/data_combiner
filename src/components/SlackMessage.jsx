@@ -13,7 +13,7 @@ export const SlackMessage = ({ groups }) => {
     }
   };
   return (
-    <>
+    <div className="slack-section">
       <h3>Slack Message builder</h3>
       <form onSubmit={handleSubmit}>
         <label>L2C Link</label>
@@ -49,6 +49,6 @@ export const SlackMessage = ({ groups }) => {
             );
           })
         : null}
-    </>
+    </div>
   );
 };

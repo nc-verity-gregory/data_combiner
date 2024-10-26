@@ -2,6 +2,8 @@
 
 ---
 
+The whole app is hosted temporarily [here](https://6717f2e250aba38defec9279--shimmering-babka-6aac32.netlify.app/)
+
 ## How to use
 
 If you want to work on this locally, go ahead and clone it down. The repo is a simple react app with no back end at all.
@@ -12,11 +14,11 @@ From here name a tutor space and add rooms for all the staff you want naming the
 
 When submitted the app will make you a json output of pairs for the LMS pairing tool and the option to download a joined CSV for auto breakout rooms for staff.
 
+If the pairs are to stay the same for the next sprint you can now download the joined JSON or download a zip of each group pairs as JSON files.
+
 You can also add a L2C link and Zoom link to generate slack messages for each channel with their pairs and links.
 
 Any issues please make a branch and submit a pull request for changes.
-
-The whole app is hosted temporarily [here](https://6717f2e250aba38defec9279--shimmering-babka-6aac32.netlify.app/)
 
 ## What's next
 

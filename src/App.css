@@ -1,8 +1,8 @@
 body {
-  display: flex;
-  flex-direction: column;
+  padding-left: 80px;
   font-family: "MarkPro";
   src: url("./MarkPro.ttf") format("truetype");
+  margin-top: 20px;
 }
 @font-face {
   font-family: "MarkPro"; /*Can be any text*/
@@ -26,25 +26,45 @@ input {
   margin-left: 16px;
 }
 
-form {
-  max-width: 50%;
-  margin: auto;
+.form-section {
+  width: 50%;
 }
-
 .results {
-  max-width: 90%;
+  max-width: 40%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 button {
   margin: 8px;
+  padding: 10px;
 }
 .student-pairs {
   font-size: 14px;
   line-height: 6px;
 }
+.inputs-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  padding: 0;
+  margin: auto;
+}
 @media (prefers-color-scheme: light) {
+}
+.results-btn {
+  width: fit-content;
+}
+.csv-json {
+  display: flex;
+  flex-direction: row;
+}
+article {
+  width: 80%;
+}
+.slack-section {
+  margin-left: 10%;
 }

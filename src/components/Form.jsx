@@ -73,7 +73,7 @@ export const Form = ({ dataGenerator, setDataGenerator }) => {
     setInputData(currData);
   };
   return (
-    <section>
+    <section className="form-section">
       <form onSubmit={handleSubmit}>
         <h3>Learner Group LMS JSON Data</h3>
         <div>
